@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import './App.css'
+import { ChakraProvider, Button } from '@chakra-ui/react'
 
 function Square({value, onSquareClick}) {
   return (
@@ -76,7 +76,7 @@ function Game() {
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <Button mb={2} boxShadow='base' onClick={() => jumpTo(move)}>{description}</Button>
       </li>
     )
   })
@@ -116,7 +116,9 @@ function calculateWinner(squares) {
 function App() {
 
   return (
-    <Game/>
+    <ChakraProvider>
+      <Game/>
+    </ChakraProvider>
   )
 }
 

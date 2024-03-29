@@ -73,6 +73,11 @@ ul {
   padding-inline-start: 20px;
 }
 
+ul li
+{
+    list-style-type: none;
+}
+
 * {
   box-sizing: border-box;
 }
